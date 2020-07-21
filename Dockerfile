@@ -9,8 +9,6 @@ RUN apt-get update
 RUN apt-get install python-pip virtualenv enchant vim telnet net-tools -y
 RUN virtualenv --python=python2.7 myenv
 RUN . myenv/bin/activate && apt-get install libmysqlclient-dev -y && apt install postgresql-server-dev-all -y 
-WORKDIR /home/mAdvisor/
-RUN . myenv/bin/activate && pip install pyenchant &&  pip install -r requirements.txt
 RUN apt-get install curl -y
 ADD code.tgz /home/mAdvisor/
 COPY startup.sh /home/mAdvisor/mAdvisor-api/
