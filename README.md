@@ -1,4 +1,4 @@
-# To build docker image using latest tag:
+## To build docker image using latest tag:
 
 	command : docker build -t api .
 	
